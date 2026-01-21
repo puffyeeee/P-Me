@@ -1,0 +1,98 @@
+P&Me
+
+
+
+
+P&Me
+Puffy
+おかえり。パーちゃん待ってたよ
+やさしい世界の入口
+Enter ↘ Moments ↘
+scroll
+
+About
+About
+ちょっぴりビビリだけど、毎日ぜんりょく元気いっぱい。
+今日もパーちゃんパワーを届けるよ
+呼び名
+パーちゃん / Puffy
+合言葉
+「パーちゃん待ってたよ〜!!おかえり」
+ひとこと
+今日もパーちゃんパワーを届けるよ
+Sound
+音楽（制作中）— 配信リンクをまとめる場所
+Apple Music / Spotify など、Puffyの音が流れる場所をここに。
+Apple Music listen ↗ Spotify listen ↗ YouTube watch ↗
+※ リンク先は js/main.js の CONFIG.links で後から変更できます。
+
+Things
+Things
+Physical（準備中）
+かぶりもの / お洋服。ゆっくり、ちゃんとかわいく準備しています。
+Shop ↗ Lookbook ↗
+Digital（配布）
+待ち受け（壁紙）を3枚。iPhone/Androidどちらでも使えます。
+Wallpapers ↘ Sound ↘
+Wallpapers
+待ち受け（配布）
+下の画像を開いて保存してね。iPhone/AndroidどちらでもOK（仮：いまある写真で作成）。
+For iPhone / Android · 9:16 · Open to save
+
+Wallpaper 01
+↗
+
+Wallpaper 02
+↗
+
+Wallpaper 03
+↗
+iPhone：長押しで保存 / Android：長押しでダウンロード
+Moments
+思い出の写真
+
+About
+ふわっと、はじめまして
+
+Sound
+やさしい音の場所
+
+Things
+すこしずつ準備中
+
+From Puffy
+ことばの手紙
+
+Contact
+ひとこと送る
+
+Moments
+きらっとした時間
+※ 画像をクリックすると、指定セクションへスムーズに移動します（画像の上に文字表示）。
+
+From Puffy
+From Puffy
+Puffyからのメッセージ
+今日はね、風がいい匂い。きみの一日が、やさしく終わりますように。
+むりしないで、ゆっくりでいいよ。
+Contact
+おたより窓口（準備中）
+準備中。
+（非公開で受け取る形で整えます）
+お名前 メールアドレス
+メッセージ
+準備中
+※ Coming soon
+
+
+
+Close Prev Next
+
+Moment
+—
+—
+P&Me
+Puffyとあなたの、やさしい場所。
+About Sound Things Wallpapers Moments From Puffy Contact
+
+© P&Me. All rights reserved.
