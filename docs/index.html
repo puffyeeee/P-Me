@@ -23,25 +23,30 @@
     <a class="brand" href="#top">P&Me</a>
   </header>
 
+  <div id="scrollVeil" class="scrollVeil"></div>
+
   <main id="top">
     <!-- HERO -->
     <section class="hero">
-      <div class="hero__bg"></div>
+      <div class="hero__media">
+        <img class="hero__img" src="./images/hero.jpg" alt="Puffy" />
+      </div>
+      <div class="hero__overlay"></div>
       <div class="hero__content">
-        <p class="eyebrow">P&Me</p>
-        <h1 class="title">Puffy</h1>
-        <p class="welcome">おかえり。パーちゃん待ってたよ</p>
-        <p class="copy">やさしい世界の入口</p>
+        <p class="hero__eyebrow">P&Me</p>
+        <h1 class="hero__title"><span class="hero__titleMain">Puffy</span></h1>
+        <p class="hero__welcome" id="heroWelcome">おかえり。パーちゃん待ってたよ</p>
+        <p class="hero__copy">やさしい世界の入口</p>
 
-        <div class="cta">
+        <div class="hero__cta">
           <a class="btn" href="#about">Enter</a>
           <a class="btn btn--ghost" href="#moments">Moments</a>
         </div>
       </div>
 
-      <a class="scroll" href="#about">
-        <span class="scroll__line"></span>
-        <span class="scroll__text">scroll</span>
+      <a class="scrollHint" href="#about">
+        <span class="scrollHint__line"></span>
+        <span class="scrollHint__text">scroll</span>
       </a>
     </section>
 
@@ -81,14 +86,71 @@
       <div class="container card">
         <h2 class="h">Moments</h2>
         <p class="lead">Moments</p>
-        <div class="grid">
-          <div class="ph"></div>
-          <div class="ph"></div>
-          <div class="ph"></div>
+        <div class="gallery">
+          <a class="galleryItem" href="#" data-moment="0">
+            <img src="./images/moments-1.jpg" alt="Moment 01" />
+            <div class="galleryItem__overlay">
+              <div class="galleryItem__title">ただいまの光</div>
+              <div class="galleryItem__sub">ひなたの匂いがすると、パーちゃんは少しだけ安心する。</div>
+            </div>
+          </a>
+          <a class="galleryItem" href="#" data-moment="1">
+            <img src="./images/moments-2.jpg" alt="Moment 02" />
+            <div class="galleryItem__overlay">
+              <div class="galleryItem__title">やさしい音のほうへ</div>
+              <div class="galleryItem__sub">静かな場所で、心の音がふわっと整う。</div>
+            </div>
+          </a>
+          <a class="galleryItem" href="#" data-moment="2">
+            <img src="./images/moments-3.jpg" alt="Moment 03" />
+            <div class="galleryItem__overlay">
+              <div class="galleryItem__title">準備中のたからもの</div>
+              <div class="galleryItem__sub">小さな"かわいい"を、ちゃんと大切に集めているところ。</div>
+            </div>
+          </a>
+          <a class="galleryItem" href="#" data-moment="3">
+            <img src="./images/moments-4.jpg" alt="Moment 04" />
+            <div class="galleryItem__overlay">
+              <div class="galleryItem__title">ことばの手紙</div>
+              <div class="galleryItem__sub">うまく言えない日も、ここではだいじょうぶ。</div>
+            </div>
+          </a>
+          <a class="galleryItem" href="#" data-moment="4">
+            <img src="./images/moments-5.jpg" alt="Moment 05" />
+            <div class="galleryItem__overlay">
+              <div class="galleryItem__title">そっと、届く</div>
+              <div class="galleryItem__sub">やさしい気持ちは、急がなくてもちゃんと届く。</div>
+            </div>
+          </a>
+          <a class="galleryItem" href="#" data-moment="5">
+            <img src="./images/moments-6.jpg" alt="Moment 06" />
+            <div class="galleryItem__overlay">
+              <div class="galleryItem__title">きらっとした時間</div>
+              <div class="galleryItem__sub">見つけた小さなきらめきは、あとで何度でも思い出せる。</div>
+            </div>
+          </a>
         </div>
-        <p class="note">※ 写真はあとで入れ替えよう</p>
       </div>
     </section>
+
+    <!-- Modal -->
+    <div id="momentsModal" class="modal" role="dialog" aria-hidden="true">
+      <div class="modal__backdrop"></div>
+      <div class="modal__veil"></div>
+      <div class="modal__panel">
+        <figure class="modal__figure">
+          <img id="momentsModalImg" class="modal__img" src="" alt="" />
+        </figure>
+        <div class="modal__below">
+          <div id="momentsModalKicker" class="modal__kicker"></div>
+          <h2 id="momentsModalTitle" class="modal__title"></h2>
+          <p id="momentsModalText" class="modal__text"></p>
+        </div>
+        <button class="modal__close" data-modal-close="true">Close</button>
+        <button class="modal__nav modal__nav--prev" data-modal-prev="true">Prev</button>
+        <button class="modal__nav modal__nav--next" data-modal-next="true">Next</button>
+      </div>
+    </div>
 
     <!-- FROM -->
     <section id="from" class="section">
@@ -117,6 +179,8 @@
       <div class="container footer__bottom">© P&Me</div>
     </footer>
   </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
   <script src="./main.js"></script>
 </body>
