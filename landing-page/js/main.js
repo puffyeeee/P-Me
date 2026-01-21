@@ -115,6 +115,16 @@ function setupMomentsModal(){
       kicker: 'Moment 06',
       title: 'きらっとした時間',
       text: '見つけた小さなきらめきは、あとで何度でも思い出せる。'
+    },
+    {
+      kicker: 'Moment 07',
+      title: '夜明け前の静けさ',
+      text: '深呼吸すると、夜の光がすっとやわらぐ。'
+    },
+    {
+      kicker: 'Moment 08',
+      title: 'はじまりの金色',
+      text: '朝日に混ざる金の粒が、今日の物語をはじめる。'
     }
   ];
 
