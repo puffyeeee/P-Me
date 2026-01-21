@@ -3,46 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Our World</title>
+    <title>P-Me | Personal Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- 背景アニメーション -->
+    <!-- 背景 -->
     <div class="background">
-        <div class="gradient-bg"></div>
-        <div class="floating-element floating-1"></div>
-        <div class="floating-element floating-2"></div>
-        <div class="floating-element floating-3"></div>
+        <div class="grain"></div>
     </div>
 
     <!-- メインコンテンツ -->
     <main class="container">
+        <!-- ナビゲーション -->
+        <nav class="navbar">
+            <div class="nav-content">
+                <div class="logo">P-Me</div>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- ヒーローセクション -->
         <section class="hero">
             <div class="hero-content">
-                <div class="title-wrapper">
-                    <h1 class="title" data-text="Welcome">Welcome</h1>
-                    <p class="subtitle">新しい体験へようこそ</p>
-                </div>
-
-                <div class="cta-section">
+                <h1 class="hero-title">Creative Developer</h1>
+                <p class="hero-subtitle">デジタルで創造性を表現する</p>
+                
+                <div class="cta-buttons">
                     <button class="btn btn-primary" id="enterBtn">
-                        <span class="btn-text">Enter</span>
-                        <span class="btn-arrow">→</span>
+                        <span>Get Started</span>
+                    </button>
+                    <button class="btn btn-secondary">
+                        <span>Learn More</span>
                     </button>
                 </div>
 
                 <div class="scroll-indicator">
                     <p>Scroll to explore</p>
-                    <div class="scroll-mouse">
-                        <div class="scroll-wheel"></div>
+                    <div class="scroll-icon">
+                        <span></span>
                     </div>
                 </div>
             </div>
+
+            <div class="hero-image">
+                <div class="image-placeholder"></div>
+            </div>
         </section>
 
-        <!-- 拡張用セクション（スクロールで表示） -->
-        <section class="info-section" id="infoSection" style="display: none;">
-            <h2>Experience</h2>
+        <!-- 情報セクション -->
+        <section class="info-section" id="about">
+            <h2>About</h2>
             <p>ここに詳細コンテンツを追加できます</p>
         </section>
     </main>

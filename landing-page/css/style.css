@@ -12,15 +12,16 @@ html {
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #0a0e27;
-    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    background: #ffffff;
+    color: #1a1a1a;
     overflow-x: hidden;
     position: relative;
 }
 
 /* ============================================
-   背景・グラデーション
+   背景・グレイン効果
    ============================================ */
 .background {
     position: fixed;
@@ -32,81 +33,14 @@ body {
     pointer-events: none;
 }
 
-.gradient-bg {
+.grain {
     position: absolute;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(
-        135deg,
-        #1a1f3a 0%,
-        #16213e 25%,
-        #0f3460 50%,
-        #16213e 75%,
-        #1a1f3a 100%
-    );
-    animation: gradientShift 15s ease infinite;
-    filter: blur(50px);
-}
-
-@keyframes gradientShift {
-    0% {
-        transform: translate(0, 0);
-    }
-    50% {
-        transform: translate(-50px, -50px);
-    }
-    100% {
-        transform: translate(0, 0);
-    }
-}
-
-/* ============================================
-   フローティング要素（装飾）
-   ============================================ */
-.floating-element {
-    position: absolute;
-    border-radius: 50%;
-    opacity: 0.1;
-    animation: float 20s infinite ease-in-out;
-}
-
-.floating-1 {
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, #00d4ff, transparent);
-    top: 10%;
-    left: 10%;
-    animation-delay: 0s;
-}
-
-.floating-2 {
-    width: 250px;
-    height: 250px;
-    background: radial-gradient(circle, #ff00ff, transparent);
-    bottom: 20%;
-    right: 15%;
-    animation-delay: 5s;
-}
-
-.floating-3 {
-    width: 200px;
-    height: 200px;
-    background: radial-gradient(circle, #00ff88, transparent);
-    top: 50%;
-    right: 10%;
-    animation-delay: 10s;
-}
-
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0px) translateX(0px);
-    }
-    33% {
-        transform: translateY(-30px) translateX(20px);
-    }
-    66% {
-        transform: translateY(30px) translateX(-20px);
-    }
+    width: 100%;
+    height: 100%;
+    background-image: 
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' result='noise' /%3E%3CfeColorMatrix in='noise' type='saturate' values='0' /%3E%3C/filter%3E%3Crect width='400' height='400' fill='%23ffffff' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+    opacity: 0.5;
+    z-index: 1;
 }
 
 /* ============================================
@@ -116,171 +50,264 @@ body {
     position: relative;
     z-index: 1;
     width: 100%;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-}
-
-.hero-content {
-    max-width: 600px;
-    padding: 20px;
 }
 
 /* ============================================
-   タイトル・テキスト
+   ナビゲーション
    ============================================ */
-.title-wrapper {
-    margin-bottom: 60px;
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
 }
 
-.title {
-    font-size: clamp(3rem, 10vw, 5rem);
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.logo {
+    font-size: 1.5rem;
     font-weight: 700;
+    color: #1a1a1a;
     letter-spacing: 2px;
-    background: linear-gradient(135deg, #00d4ff, #00ff88, #ff00ff);
-    background-size: 200% 200%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: gradientMove 8s ease infinite;
-    margin-bottom: 20px;
-    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+    transition: color 0.3s ease;
     position: relative;
 }
 
-@keyframes gradientMove {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #1a1a1a;
+    transition: width 0.3s ease;
 }
 
-.subtitle {
+.nav-links a:hover {
+    color: #1a1a1a;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* ============================================
+   ヒーローセクション
+   ============================================ */
+.hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+    padding: 120px 40px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: #1a1a1a;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+.hero-subtitle {
     font-size: 1.2rem;
-    color: #a0a0a0;
-    font-weight: 300;
-    letter-spacing: 1px;
-    margin-top: 15px;
-    animation: fadeInUp 1s ease 0.3s both;
+    color: #666;
+    font-weight: 400;
+    margin-bottom: 40px;
+    animation: fadeInUp 0.8s ease 0.4s both;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 60px;
+    animation: fadeInUp 0.8s ease 0.6s both;
 }
 
 /* ============================================
    ボタン
    ============================================ */
-.cta-section {
-    margin-bottom: 80px;
-    animation: fadeInUp 1s ease 0.6s both;
-}
-
 .btn {
-    padding: 16px 40px;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 50px;
+    padding: 14px 32px;
+    font-size: 1rem;
+    border: 2px solid #1a1a1a;
+    background: transparent;
+    color: #1a1a1a;
+    border-radius: 4px;
     cursor: pointer;
     font-weight: 600;
-    letter-spacing: 1px;
-    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-    text-transform: uppercase;
     display: inline-flex;
     align-items: center;
-    gap: 12px;
+    justify-content: center;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #1a1a1a;
+    z-index: -1;
+    transition: left 0.3s ease;
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #00d4ff, #00ff88);
-    color: #000;
-    box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+    background: #1a1a1a;
+    color: #ffffff;
+    border-color: #1a1a1a;
 }
 
 .btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 50px rgba(0, 212, 255, 0.8);
-    background: linear-gradient(135deg, #00ff88, #00d4ff);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
-.btn-primary:active {
-    transform: translateY(-1px);
+.btn-secondary {
+    background: transparent;
+    color: #1a1a1a;
+    border-color: #1a1a1a;
 }
 
-.btn-text {
-    position: relative;
+.btn-secondary:hover {
+    background: #1a1a1a;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
-.btn-arrow {
-    display: inline-block;
-    transition: transform 0.3s ease;
-}
-
-.btn:hover .btn-arrow {
-    transform: translateX(5px);
+.btn:active {
+    transform: translateY(0);
 }
 
 /* ============================================
    スクロールインジケーター
    ============================================ */
 .scroll-indicator {
-    animation: fadeInUp 1s ease 0.9s both;
-    color: #a0a0a0;
+    animation: fadeInUp 0.8s ease 0.8s both;
 }
 
 .scroll-indicator p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    color: #999;
     letter-spacing: 1px;
-    margin-bottom: 15px;
     text-transform: uppercase;
+    margin-bottom: 12px;
 }
 
-.scroll-mouse {
-    width: 30px;
-    height: 50px;
-    border: 2px solid #a0a0a0;
-    border-radius: 15px;
-    margin: 0 auto;
-    padding: 5px;
+.scroll-icon {
+    width: 24px;
+    height: 40px;
+    border: 2px solid #999;
+    border-radius: 12px;
     position: relative;
+    padding: 8px 0;
 }
 
-.scroll-wheel {
-    width: 4px;
-    height: 10px;
-    background: #a0a0a0;
-    border-radius: 2px;
-    margin: 0 auto;
-    animation: scrollBounce 2s infinite;
+.scroll-icon span {
+    position: absolute;
+    width: 2px;
+    height: 8px;
+    background: #999;
+    left: 50%;
+    top: 8px;
+    transform: translateX(-50%);
+    animation: scroll-down 2s infinite;
 }
 
-@keyframes scrollBounce {
+@keyframes scroll-down {
     0% {
-        transform: translateY(0);
         opacity: 1;
+        transform: translateX(-50%) translateY(0);
     }
     100% {
-        transform: translateY(10px);
         opacity: 0;
+        transform: translateX(-50%) translateY(16px);
     }
 }
 
 /* ============================================
-   情報セクション（拡張用）
+   ヒーロー画像
+   ============================================ */
+.hero-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeInUp 0.8s ease 0.4s both;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(135deg, #f5f5f5 0%, #eeeeee 100%);
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-placeholder::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* ============================================
+   情報セクション
    ============================================ */
 .info-section {
     min-height: 100vh;
@@ -289,23 +316,22 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 40px 20px;
+    padding: 60px 40px;
     text-align: center;
-    background: linear-gradient(180deg, #0a0e27 0%, #1a1f3a 100%);
+    background: #f9f9f9;
 }
 
 .info-section h2 {
     font-size: 3rem;
     margin-bottom: 20px;
-    background: linear-gradient(135deg, #ff00ff, #00d4ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #1a1a1a;
 }
 
-/* ============================================
-   アニメーション
-   ============================================ */
+.info-section p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+}
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -330,41 +356,76 @@ body {
    レスポンシブ
    ============================================ */
 @media (max-width: 768px) {
-    .title {
-        font-size: 2.5rem;
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 100px 20px 40px;
+        gap: 40px;
     }
 
-    .subtitle {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
         font-size: 1rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
     }
 
     .btn {
-        padding: 14px 30px;
-        font-size: 1rem;
+        width: 100%;
+    }
+
+    .nav-content {
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .image-placeholder {
+        height: 300px;
     }
 
     .info-section h2 {
         font-size: 2rem;
     }
-
-    .floating-element {
-        opacity: 0.05;
-    }
 }
 
 @media (max-width: 480px) {
-    .title {
-        font-size: 2rem;
+    .nav-links {
+        display: none;
     }
 
-    .subtitle {
+    .hero {
+        padding: 80px 15px 30px;
+    }
+
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .hero-subtitle {
         font-size: 0.9rem;
     }
 
     .btn {
         padding: 12px 24px;
         font-size: 0.9rem;
-        flex-direction: column;
-        gap: 8px;
+    }
+
+    .info-section {
+        padding: 40px 20px;
+    }
+
+    .info-section h2 {
+        font-size: 1.5rem;
     }
 }
