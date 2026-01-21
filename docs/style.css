@@ -894,7 +894,7 @@ html{
 
 body{
   margin:0;
-  font-family: "Playfair Display", "Noto Sans JP", system-ui, -apple-system, "Hiragino Sans", "Yu Gothic", sans-serif;
+  font-family: var(--font-jp);
   color:var(--ink);
   background:var(--paper);
   -webkit-font-smoothing:antialiased;
@@ -913,7 +913,7 @@ body{
 }
 
 .brand{
-  font-family:var(--font-en);
+  font-family: var(--font-en);
   text-decoration:none;
   color:var(--ink);
   letter-spacing:.08em;
@@ -950,7 +950,7 @@ body{
 }
 
 .title{
-  font-family:var(--font-en);
+  font-family: var(--font-en);
   font-size:64px;
   font-weight:500;
   margin:8px 0;
@@ -1011,7 +1011,7 @@ body{
 
 /* 見出し */
 .h{
-  font-family:var(--font-en);
+  font-family: var(--font-en);
   font-size:24px;
   font-weight:500;
   letter-spacing:.08em;
@@ -1073,7 +1073,7 @@ body{
 }
 
 .footer__logo{
-  font-family:var(--font-en);
+  font-family: var(--font-en);
   letter-spacing:.1em;
 }
 
