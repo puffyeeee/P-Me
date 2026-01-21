@@ -1,12 +1,113 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <title>P-Me</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>P&Me | Puffy</title>
+  <meta name="description" content="おかえり。パーちゃん待ってたよ。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
 </head>
+
 <body>
-  <h1>P-Me</h1>
-  <p>おかえり。ここはやさしい世界の入口。</p>
+  <header class="top">
+    <a class="brand" href="#top">P&Me</a>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__bg"></div>
+      <div class="hero__content">
+        <p class="eyebrow">P&Me</p>
+        <h1 class="title">Puffy</h1>
+        <p class="welcome">おかえり。パーちゃん待ってたよ</p>
+        <p class="copy">やさしい世界の入口</p>
+
+        <div class="cta">
+          <a class="btn" href="#about">Enter</a>
+          <a class="btn btn--ghost" href="#moments">Moments</a>
+        </div>
+      </div>
+
+      <a class="scroll" href="#about">
+        <span class="scroll__line"></span>
+        <span class="scroll__text">scroll</span>
+      </a>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container card">
+        <h2 class="h">About</h2>
+        <p class="lead">まっしろマルプーのパフィーだよ。ちょっぴりビビリだけど、毎日全力、元気いっぱい。</p>
+        <p class="body">今日もパーちゃんパワーを届けるよ。</p>
+
+        <dl class="meta">
+          <div class="row"><dt>生まれた日</dt><dd>2024.12.03</dd></div>
+          <div class="row"><dt>ニックネーム</dt><dd>ぱふぃたん/パーちゃん/P</dd></div>
+          <div class="row"><dt>好きなこと</dt><dd>わんちゃんとたくさん遊ぶこと、褒められること</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- SOUND -->
+    <section id="sound" class="section">
+      <div class="container card">
+        <h2 class="h">Sound</h2>
+        <p class="lead">音楽（準備中）</p>
+        <div class="links">
+          <a class="link" href="#" target="_blank" rel="noreferrer">Apple Music ↗</a>
+          <a class="link" href="#" target="_blank" rel="noreferrer">Spotify ↗</a>
+          <a class="link" href="#" target="_blank" rel="noreferrer">YouTube ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MOMENTS -->
+    <section id="moments" class="section">
+      <div class="container card">
+        <h2 class="h">Moments</h2>
+        <p class="lead">おもいで</p>
+        <div class="grid">
+          <div class="ph"></div>
+          <div class="ph"></div>
+          <div class="ph"></div>
+        </div>
+        <p class="note">※ ここに写真を並べられるよ（後で入れ替えよう）</p>
+      </div>
+    </section>
+
+    <!-- FROM -->
+    <section id="from" class="section">
+      <div class="container card">
+        <h2 class="h">From Puffy</h2>
+        <p class="body">
+          ふふって思ってくれたらいいな。<br/>
+          パーちゃんパワー、みんなに届け〜！！<br/>
+        </p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div>
+          <div class="footer__logo">P&Me</div>
+          <div class="footer__desc">Puffyとみんなが会える場所。</div>
+        </div>
+        <nav class="footer__nav">
+          <a href="#about">About</a>
+          <a href="#sound">Sound</a>
+          <a href="#moments">Moments</a>
+          <a href="#from">From Puffy</a>
+        </nav>
+      </div>
+      <div class="container footer__bottom">© P&Me</div>
+    </footer>
+  </main>
+
+  <script src="./main.js"></script>
 </body>
 </html>
