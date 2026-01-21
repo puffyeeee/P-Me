@@ -1,67 +1,346 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>P-Me | Personal Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>P&Me | Puffy</title>
+    <meta name="description" content="Puffyの紹介サイト「P&Me」— やさしい世界の入口" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/grain.css" />
 </head>
 <body>
-    <!-- 背景 -->
-    <div class="background">
-        <div class="grain"></div>
-    </div>
+    <a class="brand" href="#top" aria-label="トップへ戻る">
+        <span class="brand__text">P&Me</span>
+    </a>
 
-    <!-- メインコンテンツ -->
-    <main class="container">
-        <!-- ナビゲーション -->
-        <nav class="navbar">
-            <div class="nav-content">
-                <div class="logo">P-Me</div>
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="scrollVeil" id="scrollVeil" aria-hidden="true"></div>
+
+    <main id="top">
+        <section class="section hero" aria-label="トップセクション">
+            <div class="hero__media reveal">
+                <img src="images/hero.jpg" alt="Puffyのメイン写真" class="hero__img" />
+                <div class="hero__overlay" aria-hidden="true"></div>
             </div>
-        </nav>
 
-        <!-- ヒーローセクション -->
-        <section class="hero">
-            <div class="hero-content">
-                <h1 class="hero-title">Creative Developer</h1>
-                <p class="hero-subtitle">デジタルで創造性を表現する</p>
-                
-                <div class="cta-buttons">
-                    <button class="btn btn-primary" id="enterBtn">
-                        <span>Get Started</span>
-                    </button>
-                    <button class="btn btn-secondary">
-                        <span>Learn More</span>
-                    </button>
+            <div class="hero__content reveal">
+                <p class="hero__eyebrow">P&Me</p>
+                <h1 class="hero__title">
+                    <span class="hero__titleMain">Puffy</span>
+                </h1>
+                <p class="hero__welcome" id="heroWelcome" aria-live="polite">おかえり。パーちゃん待ってたよ</p>
+                <p class="hero__copy">やさしい世界の入口</p>
+                <div class="hero__cta hero__cta--minimal" aria-label="ヒーロー導線">
+                    <a class="textLink" href="#about">Enter ↘</a>
+                    <a class="textLink" href="#moments">Moments ↘</a>
+                </div>
+            </div>
+
+            <a class="scrollHint" href="#about" aria-label="下へスクロール">
+                <span class="scrollHint__line" aria-hidden="true"></span>
+                <span class="scrollHint__text">scroll</span>
+            </a>
+        </section>
+
+        <section id="about" class="section" aria-label="About">
+            <div class="container split">
+                <div class="split__media reveal">
+                    <a class="mediaCard" href="#about" aria-label="Aboutセクション">
+                        <img src="images/about.jpg" alt="Puffyの写真（About）" loading="lazy" />
+                        <div class="mediaCard__label">About</div>
+                    </a>
                 </div>
 
-                <div class="scroll-indicator">
-                    <p>Scroll to explore</p>
-                    <div class="scroll-icon">
-                        <span></span>
+                <div class="split__content reveal">
+                    <h2 class="h">About</h2>
+                    <p class="lead">ちょっぴりビビリだけど、毎日ぜんりょく元気いっぱい。</p>
+                    <p class="body">今日もパーちゃんパワーを届けるよ</p>
+
+                    <dl class="meta" aria-label="Puffyのこと">
+                        <div class="meta__row"><dt>呼び名</dt><dd>パーちゃん / Puffy</dd></div>
+                        <div class="meta__row"><dt>合言葉</dt><dd>「パーちゃん待ってたよ〜!!おかえり」</dd></div>
+                        <div class="meta__row"><dt>ひとこと</dt><dd>今日もパーちゃんパワーを届けるよ</dd></div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <section id="sound" class="section" aria-label="Sound">
+            <div class="container">
+                <div class="soundLayout">
+                    <header class="sectionHead reveal">
+                        <h2 class="h">Sound</h2>
+                        <p class="lead">音楽（制作中）— 配信リンクをまとめる場所</p>
+                        <p class="body">Apple Music / Spotify など、Puffyの音が流れる場所をここに。</p>
+                    </header>
+
+                    <div class="soundLinks reveal" role="list" aria-label="配信リンク">
+                        <a class="soundLink" role="listitem" href="#" data-placeholder-link data-link-key="appleMusic" aria-label="Apple Musicへ">
+                            <span class="soundLink__name">Apple Music</span>
+                            <span class="soundLink__meta">listen ↗</span>
+                        </a>
+                        <a class="soundLink" role="listitem" href="#" data-placeholder-link data-link-key="spotify" aria-label="Spotifyへ">
+                            <span class="soundLink__name">Spotify</span>
+                            <span class="soundLink__meta">listen ↗</span>
+                        </a>
+                        <a class="soundLink" role="listitem" href="#" data-placeholder-link data-link-key="youtube" aria-label="YouTubeへ">
+                            <span class="soundLink__name">YouTube</span>
+                            <span class="soundLink__meta">watch ↗</span>
+                        </a>
+
+                        <p class="hint">※ リンク先は <code>js/main.js</code> の <code>CONFIG.links</code> で後から変更できます。</p>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="hero-image">
-                <div class="image-placeholder"></div>
+        <section id="things" class="section" aria-label="Things">
+            <div class="container split split--reverse">
+                <div class="split__media reveal">
+                    <a class="mediaCard" href="#things" aria-label="Thingsセクション">
+                        <img src="images/things.jpg" alt="グッズのイメージ写真" loading="lazy" />
+                        <div class="mediaCard__label">Things</div>
+                    </a>
+                </div>
+
+                <div class="split__content reveal">
+                    <h2 class="h">Things</h2>
+
+                    <div class="thingsGroup" aria-label="Physical">
+                        <p class="lead">Physical（準備中）</p>
+                        <p class="body">かぶりもの / お洋服。ゆっくり、ちゃんとかわいく準備しています。</p>
+                        <div class="linkActions" aria-label="Physicalリンク">
+                            <a class="textLink" href="#" data-placeholder-link data-link-key="shop">Shop ↗</a>
+                            <a class="textLink" href="#moments">Lookbook ↗</a>
+                        </div>
+                    </div>
+
+                    <div class="thingsGroup thingsGroup--digital" aria-label="Digital">
+                        <p class="lead">Digital（配布）</p>
+                        <p class="body">待ち受け（壁紙）を3枚。iPhone/Androidどちらでも使えます。</p>
+                        <div class="linkActions" aria-label="Digitalリンク">
+                            <a class="textLink" href="#wallpapers">Wallpapers ↘</a>
+                            <a class="textLink" href="#sound">Sound ↘</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- 情報セクション -->
-        <section class="info-section" id="about">
-            <h2>About</h2>
-            <p>ここに詳細コンテンツを追加できます</p>
+        <section id="wallpapers" class="section" aria-label="Wallpapers">
+            <div class="container">
+                <header class="sectionHead reveal">
+                    <h2 class="h">Wallpapers</h2>
+                    <p class="lead">待ち受け（配布）</p>
+                    <p class="body">下の画像を開いて保存してね。iPhone/AndroidどちらでもOK（仮：いまある写真で作成）。</p>
+                </header>
+
+                <p class="creditLine reveal" aria-label="壁紙について">For iPhone / Android · 9:16 · Open to save</p>
+                <div class="wallpaperGrid reveal" aria-label="壁紙ギャラリー">
+                    <a class="wallpaperCard" href="images/wallpapers/wp-1.jpg" target="_blank" rel="noopener noreferrer" aria-label="壁紙1を開く">
+                        <img src="images/wallpapers/wp-1.jpg" alt="Puffy 壁紙 1" loading="lazy" />
+                        <div class="wallpaperCard__meta">
+                            <div class="wallpaperCard__title">Wallpaper 01</div>
+                            <div class="wallpaperCard__sub">↗</div>
+                        </div>
+                    </a>
+                    <a class="wallpaperCard" href="images/wallpapers/wp-2.jpg" target="_blank" rel="noopener noreferrer" aria-label="壁紙2を開く">
+                        <img src="images/wallpapers/wp-2.jpg" alt="Puffy 壁紙 2" loading="lazy" />
+                        <div class="wallpaperCard__meta">
+                            <div class="wallpaperCard__title">Wallpaper 02</div>
+                            <div class="wallpaperCard__sub">↗</div>
+                        </div>
+                    </a>
+                    <a class="wallpaperCard" href="images/wallpapers/wp-3.jpg" target="_blank" rel="noopener noreferrer" aria-label="壁紙3を開く">
+                        <img src="images/wallpapers/wp-3.jpg" alt="Puffy 壁紙 3" loading="lazy" />
+                        <div class="wallpaperCard__meta">
+                            <div class="wallpaperCard__title">Wallpaper 03</div>
+                            <div class="wallpaperCard__sub">↗</div>
+                        </div>
+                    </a>
+                </div>
+
+                <p class="noteLine reveal" aria-label="保存のしかた">iPhone：長押しで保存 / Android：長押しでダウンロード</p>
+            </div>
         </section>
+
+        <section id="moments" class="section" aria-label="Moments">
+            <div class="container">
+                <header class="sectionHead reveal">
+                    <h2 class="h">Moments</h2>
+                    <p class="lead">思い出の写真</p>
+                </header>
+
+                <div class="gallery reveal" aria-label="フォトギャラリー">
+                    <a class="galleryItem" href="#moments" data-moment="0" aria-label="写真を開く（1/6）">
+                        <img src="images/moments-1.jpg" alt="Puffyの写真1" loading="lazy" />
+                        <div class="galleryItem__overlay">
+                            <div class="galleryItem__title">About</div>
+                            <div class="galleryItem__sub">ふわっと、はじめまして</div>
+                        </div>
+                    </a>
+
+                    <a class="galleryItem" href="#moments" data-moment="1" aria-label="写真を開く（2/6）">
+                        <img src="images/moments-2.jpg" alt="Puffyの写真2" loading="lazy" />
+                        <div class="galleryItem__overlay">
+                            <div class="galleryItem__title">Sound</div>
+                            <div class="galleryItem__sub">やさしい音の場所</div>
+                        </div>
+                    </a>
+
+                    <a class="galleryItem" href="#moments" data-moment="2" aria-label="写真を開く（3/6）">
+                        <img src="images/moments-3.jpg" alt="Puffyの写真3" loading="lazy" />
+                        <div class="galleryItem__overlay">
+                            <div class="galleryItem__title">Things</div>
+                            <div class="galleryItem__sub">すこしずつ準備中</div>
+                        </div>
+                    </a>
+
+                    <a class="galleryItem" href="#moments" data-moment="3" aria-label="写真を開く（4/6）">
+                        <img src="images/moments-4.jpg" alt="Puffyの写真4" loading="lazy" />
+                        <div class="galleryItem__overlay">
+                            <div class="galleryItem__title">From Puffy</div>
+                            <div class="galleryItem__sub">ことばの手紙</div>
+                        </div>
+                    </a>
+
+                    <a class="galleryItem" href="#moments" data-moment="4" aria-label="写真を開く（5/6）">
+                        <img src="images/moments-5.jpg" alt="Puffyの写真5" loading="lazy" />
+                        <div class="galleryItem__overlay">
+                            <div class="galleryItem__title">Contact</div>
+                            <div class="galleryItem__sub">ひとこと送る</div>
+                        </div>
+                    </a>
+
+                    <a class="galleryItem" href="#moments" data-moment="5" aria-label="写真を開く（6/6）">
+                        <img src="images/moments-6.jpg" alt="Puffyの写真6" loading="lazy" />
+                        <div class="galleryItem__overlay">
+                            <div class="galleryItem__title">Moments</div>
+                            <div class="galleryItem__sub">きらっとした時間</div>
+                        </div>
+                    </a>
+                </div>
+
+                <p class="hint reveal">※ 画像をクリックすると、指定セクションへスムーズに移動します（画像の上に文字表示）。</p>
+            </div>
+        </section>
+
+        <section id="from" class="section" aria-label="From Puffy">
+            <div class="container split">
+                <div class="split__media reveal">
+                    <a class="mediaCard" href="#from" aria-label="From Puffyセクション">
+                        <img src="images/from.jpg" alt="Puffyの写真（From Puffy）" loading="lazy" />
+                        <div class="mediaCard__label">From Puffy</div>
+                    </a>
+                </div>
+
+                <div class="split__content reveal">
+                    <h2 class="h">From Puffy</h2>
+                    <p class="lead">Puffyからのメッセージ</p>
+                    <div class="note">
+                        <p class="body">今日はね、風がいい匂い。きみの一日が、やさしく終わりますように。</p>
+                        <p class="body">むりしないで、ゆっくりでいいよ。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section" aria-label="Contact">
+            <div class="container">
+                <header class="sectionHead reveal">
+                    <h2 class="h">Contact</h2>
+                    <p class="lead">おたより窓口（準備中）</p>
+                </header>
+
+                <div class="note reveal" aria-label="おたよりについて">
+                    <p class="body">準備中。</p>
+                    <p class="body">（非公開で受け取る形で整えます）</p>
+                </div>
+
+                <form class="form reveal" id="contactForm" data-disabled="true" aria-disabled="true">
+                    <div class="form__row">
+                        <label class="field">
+                            <span class="field__label">お名前</span>
+                            <input class="field__input" name="name" type="text" autocomplete="name" placeholder="準備中" disabled />
+                        </label>
+                        <label class="field">
+                            <span class="field__label">メールアドレス</span>
+                            <input class="field__input" name="email" type="email" autocomplete="email" placeholder="準備中" disabled />
+                        </label>
+                    </div>
+
+                    <label class="field">
+                        <span class="field__label">メッセージ</span>
+                        <textarea class="field__input field__input--textarea" name="message" rows="6" placeholder="準備中" disabled></textarea>
+                    </label>
+
+                    <div class="form__actions">
+                        <button class="btn btn--primary" type="submit" disabled>準備中</button>
+                        <p class="form__note">※ Coming soon</p>
+                    </div>
+                </form>
+
+                <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+            </div>
+        </section>
+
+        <div class="modal" id="momentsModal" aria-hidden="true" role="dialog" aria-label="Moments viewer">
+            <div class="modal__backdrop" data-modal-close aria-hidden="true"></div>
+            <div class="modal__veil" aria-hidden="true"></div>
+            <div class="modal__panel" role="document">
+                <button class="modal__close" type="button" data-modal-close aria-label="閉じる">Close</button>
+                <button class="modal__nav modal__nav--prev" type="button" data-modal-prev aria-label="前へ">Prev</button>
+                <button class="modal__nav modal__nav--next" type="button" data-modal-next aria-label="次へ">Next</button>
+                <figure class="modal__figure" aria-label="写真">
+                    <img class="modal__img" id="momentsModalImg" alt="" />
+                </figure>
+
+                <div class="modal__below" aria-label="キャプション">
+                    <div class="modal__kicker" id="momentsModalKicker">Moment</div>
+                    <div class="modal__title" id="momentsModalTitle">—</div>
+                    <div class="modal__text" id="momentsModalText">—</div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer" aria-label="フッター">
+            <div class="container footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__logo">P&Me</div>
+                    <p class="footer__desc">Puffyとあなたの、やさしい場所。</p>
+                </div>
+
+                <nav class="footer__nav" aria-label="フッターナビ">
+                    <a href="#about">About</a>
+                    <a href="#sound">Sound</a>
+                    <a href="#things">Things</a>
+                    <a href="#wallpapers">Wallpapers</a>
+                    <a href="#moments">Moments</a>
+                    <a href="#from">From Puffy</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+
+                <div class="footer__social" aria-label="SNSリンク">
+                    <a class="social" href="#" data-placeholder-link data-link-key="instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a class="social" href="#" data-placeholder-link data-link-key="threads" aria-label="Threads"><i class="fa-brands fa-threads"></i></a>
+                    <a class="social" href="#" data-placeholder-link data-link-key="x" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a class="social" href="#" data-placeholder-link data-link-key="tiktok" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="container footer__bottom">
+                <small>© <span id="year"></span> P&Me. All rights reserved.</small>
+            </div>
+        </footer>
     </main>
 
-    <!-- スクリプト -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
