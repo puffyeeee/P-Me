@@ -644,10 +644,9 @@ code{background: rgba(16,16,24,.06); padding: 2px 6px; border-radius: 8px; borde
 
 /* 画像は“全体ブラー”ではなく、フェードイン的に霞が抜ける（高級感） */
 .reveal img{
-  opacity: 0;
-  transform: scale(1.01);
-  /* 画像自体は極薄の調整だけ（ブラーはベール側で表現） */
-  filter: saturate(1.02) contrast(1.02);
+  opacity: 1;
+  transform: scale(1);
+  filter: saturate(1) contrast(1);
   transition:
     opacity 2.0s var(--ease),
     transform 2.6s var(--ease),
