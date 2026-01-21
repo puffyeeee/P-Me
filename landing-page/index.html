@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Our World</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 背景アニメーション -->
+    <div class="background">
+        <div class="gradient-bg"></div>
+        <div class="floating-element floating-1"></div>
+        <div class="floating-element floating-2"></div>
+        <div class="floating-element floating-3"></div>
+    </div>
+
+    <!-- メインコンテンツ -->
+    <main class="container">
+        <section class="hero">
+            <div class="hero-content">
+                <div class="title-wrapper">
+                    <h1 class="title" data-text="Welcome">Welcome</h1>
+                    <p class="subtitle">新しい体験へようこそ</p>
+                </div>
+
+                <div class="cta-section">
+                    <button class="btn btn-primary" id="enterBtn">
+                        <span class="btn-text">Enter</span>
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </div>
+
+                <div class="scroll-indicator">
+                    <p>Scroll to explore</p>
+                    <div class="scroll-mouse">
+                        <div class="scroll-wheel"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 拡張用セクション（スクロールで表示） -->
+        <section class="info-section" id="infoSection" style="display: none;">
+            <h2>Experience</h2>
+            <p>ここに詳細コンテンツを追加できます</p>
+        </section>
+    </main>
+
+    <!-- スクリプト -->
+    <script src="js/main.js"></script>
+</body>
+</html>
